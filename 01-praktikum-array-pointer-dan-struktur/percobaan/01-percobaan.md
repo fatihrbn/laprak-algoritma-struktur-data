@@ -1,4 +1,4 @@
-# 01-praktikum: Cara memberikan nilai pada array dan mengakses array
+# Percobaan 1 : Cara memberikan nilai pada array dan mengakses array
 
 ## Code
 ``` c
