@@ -12,6 +12,7 @@ E A S * Y * Q U E * * * S T * * * I O * N * * *
 ## Code 
 ``` c
 #include <stdio.h>
+#include <string.h>
 #define MAX 50
 
 typedef char ItemType;
@@ -53,19 +54,18 @@ void pop(Stack *S) {
 }
 
 int main() {
-  char word[] = {'E','A','S','*','Y','*','Q','U','E','*','*','*','S','T','*','*','*','I','O','*','N','*','*','*'};
-  int wordLength = sizeof(word)/sizeof(*word);
+  char word[] = "E A S * Y * Q U E * * * S T * * * I O * N * * *";
+  int wordLength = strlen(word);
   Stack stack;
   initializeStack(&stack);
   printf("Input:\n");
-  for (int i = 0; i< wordLength; i++) {
-    printf("%c ", word[i]);
-  }
-  printf("\n\n");
+  printf("%s\n\n", word);
   printf("Output:\n");
   for (int i = 0; i < wordLength; i++) {
     if (word[i] == '*') {
       pop(&stack);
+    } else if (word[i] == ' ') {
+      continue;
     } else {
       push(&stack, word[i]);
     }
