@@ -10,6 +10,7 @@ Kalimat tersebut adalah palindrom
 
 ## Code
 ```c
+//latihan4.c
 #include <stdio.h>
 #include <string.h>
 #define MAX 50
@@ -86,5 +87,27 @@ int main() {
 }
 ```
 
+## Penjelasan
+```c
+void reverseWordCompare(char word[]) {
+  int wordLength = strlen(word);
+  char temp, reverseWord[wordLength];
+  for (int i = 0; i < wordLength; i++) {
+    temp = word[i];
+    push(&stack, temp);
+  }
+  for (int j = 0; j < wordLength; j++) {
+    reverseWord[j] = pop(&stack);
+  }
+  printf("%s\n\n", reverseWord);
+
+  if (strcmp(word, reverseWord) == 0) {
+    printf("Kalimat tersebut palindrome");
+  } else {
+    printf("Kalimat tersebut tidak palindrome");
+  }
+}
+```
+Menyimpan hasil dari kalimat yang sudah dibalik ke dalam variabel ```reverseWord```, kemudian menggunakan fungsi ```strcmp()``` dari library ```<string.h>``` untuk membandingkan variabel ```word``` dan ``reverseWord```. Jika hasil perbandingan menghasilkan nilai 0, maka kedua variabel tersebut sama. Jika hasilnya tidak sama dengan 0, maka kedua variabel tersebut tidak sama.
 ## Output
 ![image](https://user-images.githubusercontent.com/89684302/159176050-e66ada8e-6f0e-4080-88c9-c99b3245b4a9.png)
