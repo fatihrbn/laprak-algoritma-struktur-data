@@ -5,6 +5,7 @@ bilangan biner, octal, heksa dengan menggunakan stack
 
 ## Code
 ``` c
+//latihan2.c
 #include <stdio.h>
 #include <string.h>
 #define MAX 50
@@ -123,6 +124,41 @@ int main() {
   return 0;
 }
 ```
+
+## Penjelasan
+```c
+void decimalToBinary(Stack *S, ItemType n) {
+  while (n != 0) {
+    push(S, n%2);
+    n /= 2;
+  }
+  while (S->count > 0) {
+    printf("%d",pop(S));
+  }
+}
+
+void decimalToHexadecimal(Stack *S, ItemType n) {
+  int hexResult;
+  while (n != 0) {
+    push(S, n%16);
+    n /= 16;
+  }
+  while (S->count > 0) {
+    hexResult = pop(S);
+    switch(hexResult) {
+      case 10:
+        hexResult = 'A';
+        printf("%c", hexResult);
+        break;
+      default:
+        printf("%c", hexResult);
+        break;
+    }
+  }
+}
+```
+Fungsi ```decimalToBinary(Stack *S, ItemType n)``` mengubah bilangan desimal menjadi biner. Cara kerjanya adalah bilangan desimal akan direpresentasikan sebagai nilai ```n``` pada parameter fungsi. Kemudian menggunakan ```while``` loop untuk mencari sisa hasil bagi atau modulus dari ```n/2``` yang akan di```push``` ke dalam stack hingga loopnya berhenti atau ```n=0```. Kemudian melakukan operasi ```pop``` dan mencetak semua item yang berada di dalam stack ke console. Begitu juga dengan ```decimalToOctal``` menggunakan ```n/8``` dan ```decimalToHexadecimal``` menggunakan ```n/16```. Pada fungsi ```decimalToHexadecimal```, jika bilangan yang tersisa lebih dari 9, maka akan diganti dengan huruf ```A, B, C, D, E, F```.
+
 
 ## Output
 ![image](https://user-images.githubusercontent.com/89684302/159175771-b1caeaa0-e220-4597-8d4c-8c5f32d720dd.png)
