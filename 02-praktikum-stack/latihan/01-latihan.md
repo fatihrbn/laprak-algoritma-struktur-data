@@ -94,6 +94,6 @@ int main() {
   return 0;
 }
 ```
-Menggunakan ```for``` loop pada array ```word``` untuk mengakses tiap karakter pada array. Kemudian menggunakan ```if else``` atau conditional statement untuk melakukan operasi stack. Jika karakter pada index ke-i nilainya sama dengan asterix(\*), maka ```pop``` dan cetak karakter pada stack. Jika karakter pada index ke-i nilainya sama dengan spasi(' '), maka lanjutkan looping ke index berikutnya. Jika karakter pada index ke-i nilainya tidk sama dengan asterix dan spasi, maka ```push``` karakter tersebut ke dalam stack.
+Menggunakan ```for``` loop pada array ```word``` untuk mengakses tiap karakter pada array. Kemudian menggunakan ```if else``` atau conditional statement untuk melakukan operasi stack. Jika karakter pada index ke-i nilainya sama dengan asterix(\*), maka ```pop``` karakter dari stack dan cetak ke console. Jika karakter pada index ke-i nilainya sama dengan spasi(' '), maka lanjutkan looping ke index berikutnya. Jika karakter pada index ke-i nilainya tidak sama dengan asterix atau spasi, maka ```push``` karakter tersebut ke dalam stack.
 ## Output
 ![image](https://user-images.githubusercontent.com/89684302/159175707-296be16e-abab-4961-8fc1-735bbd03241c.png)
