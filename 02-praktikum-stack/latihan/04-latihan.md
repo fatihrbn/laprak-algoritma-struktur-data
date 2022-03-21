@@ -108,6 +108,6 @@ void reverseWordCompare(char word[]) {
   }
 }
 ```
-Menyimpan hasil dari kalimat yang sudah dibalik ke dalam variabel ```reverseWord```, kemudian menggunakan fungsi ```strcmp()``` dari library ```<string.h>``` untuk membandingkan variabel ```word``` dan ```reverseWord```. Jika hasil perbandingan menghasilkan nilai 0, maka kedua variabel tersebut sama. Jika hasilnya tidak sama dengan 0, maka kedua variabel tersebut tidak sama.
+Menyimpan hasil dari kalimat yang sudah dibalik ke dalam variabel ```reverseWord```, kemudian menggunakan fungsi ```strcmp()``` dari library ```<string.h>``` untuk membandingkan variabel ```word``` dan ```reverseWord```. Jika hasil perbandingan menghasilkan nilai 0, maka kalimat tersebut palindrom. Jika hasil perbandingan tidak sama dengan 0, maka kalimat tersebut tidak palindrom
 ## Output
 ![image](https://user-images.githubusercontent.com/89684302/159176050-e66ada8e-6f0e-4080-88c9-c99b3245b4a9.png)
